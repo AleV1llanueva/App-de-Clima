@@ -1,0 +1,137 @@
+/* Colores en hexadecimal
+264653 Verde oscuro
+2A9D8F verde claro
+E9C46A amarillo
+F4A261 naranja suave
+E76F51 naranja oscuro */
+
+body {
+    background-color: #264643;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#contAll {
+    margin: 3vw 3vh 3vw 3vh;
+    padding: 0;
+    display: grid;
+    width: 94vw;
+    height: 87vh;
+    grid-template-columns: 0.8fr 1.2fr;
+    grid-template-rows: 0.7fr 1.3fr;
+    gap: 32px 32px;
+    grid-template-areas: 
+    "daily postHour"
+    "daily phrase";
+}
+
+.contDailyInfo {
+    grid-area: daily;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #2a9d8f;
+    border-radius: 50px;
+}
+
+.textHour {
+    color: #264653;
+    font-family: sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 75px;
+}
+
+.cloudy {
+    margin-top: 19px;
+    font-size: 35px;
+    color: #fff;
+}
+
+.sunImg > box-icon {
+    margin-top: 56px;
+    width: 100px;
+    height: 100px;
+    transition: transform 1.5s ease-in-out;
+}
+
+.sunImg > box-icon:hover {
+    transform: rotate(360deg);
+}
+
+.actualTemp {
+    color: #e9c46a;
+    font-size: 65px;
+    font-weight: 700;
+    margin-top: 26px;
+}
+
+/* Segundo cuadro */
+
+#contPostHour {
+    grid-area: postHour;
+    flex: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2a9d8f;
+    border-radius: 40px;
+}
+
+.hours {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 116px;
+    height: 120px;
+    border-right: 3px solid #264653;
+}
+
+.fHours {
+    border: 0;
+}
+
+.posttime {
+    color: #264643;
+    font-size: 20px;
+}
+
+.postTemp {
+    margin: 35px;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+}
+
+#contPhrase {
+    grid-area: phrase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2a9d8f;
+    border-radius: 40px;
+}
+
+.titlePhrase {
+    margin-top: 36px;
+    color: #264643;
+    font-size: 30px;
+}
+
+.phrase {
+    margin: 92px 85px;
+    color: #fff;
+    font-size: 16px;
+    font-style: italic;
+    text-align: center;
+}
+
+@keyframes RotarSol {
+    0% {}
+    100% {
+        transform: rotate (180deg);
+    }
+}
